@@ -1,13 +1,19 @@
 import * as React from 'react';
 import './importAllIcons';
 import './icon.scss';
-import classes from '../helpers/classes';
+
+let importAll = (requireContext: __WebpackModuleApi.RequireContext) => requireContext.keys().forEach(requireContext);
+try {importAll(require.context('./icons', true, /\.svg$/));} catch (error) {console.log(error);}
+
 
 interface IconProps extends React.SVGAttributes<SVGElement> {
   name: string;
 }
 
 const Icon: React.FunctionComponent<IconProps> = ({className, name, ...restProps}) => {
+  function classes(...names: (string | undefined)[]) {
+    return names.filter(Boolean).join(' ');
+  }
   return (
     <svg
       className={classes('ting-icon', className)}

@@ -154,5 +154,10 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "@types/webpack-env": "^1.16.0",
+    "svg-sprite-loader": "^6.0.6",
+    "svgo-loader": "^3.0.0"
   }
 }
