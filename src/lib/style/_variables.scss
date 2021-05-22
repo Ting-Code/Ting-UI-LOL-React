@@ -10,7 +10,7 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
-$blue:    #0d6efd !default;
+$blue: #0d6efd !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #d63384 !default;
@@ -21,26 +21,33 @@ $green:   #52c41a !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+//主要颜色
+$default:       #cdbe91;
+//背景颜色
+$background-color: #010a13;
+//标题字体
+$title: #f0e6d2;
 
-$theme-colors: 
-(
-  "primary":    $primary,
-  "secondary":  $secondary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $danger,
-  "light":      $light,
-  "dark":       $dark
-);
+
+//按钮高亮颜色
+$highlight:      #f0e6d2;
+//按钮边框
+$border-color:  #c89f48;
+//边框高亮
+$border-color-highlight: #efe4d4;
+//点击颜色
+$avtive-color: #7e6531;
+
+//青色按钮字体颜色
+$primary: #a3c7c7;
+//青色高亮
+$primary-height: #f0e6d2;
+
+
+
+
+
+
 
 //主要字体
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
@@ -48,6 +55,12 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 //默认字体
 $font-family-base: $font-family-sans-serif !default;
+
+// body
+$body-bg:                   $white !default;
+$body-color:                $gray-900 !default;
+$body-text-align:           null !default;
+
 
 // 字体大小
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
@@ -77,17 +90,13 @@ $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
 
 // 链接
-$link-color:                              $primary !default;
+$link-color:                              $default !default;
 $link-decoration:                         none !default;
-$link-hover-color:                        darken($link-color, 15%) !default;
+$link-hover-color:                        $highlight !default;
 $link-hover-decoration:                   underline !default;
 
-// body
-$body-bg:                   $white !default;
-$body-color:                $gray-900 !default;
-$body-text-align:           null !default;
 
-// Spacing
+// Spacing行间距
 $spacer: 1rem !default;
 
 $headings-margin-bottom:      $spacer / 2 !default;
@@ -164,12 +173,13 @@ $pre-color:                         null !default;
 // options 可配置选项
 $enable-pointer-cursor-for-buttons:           true !default;
 
+
+
 // 边框 和 border radius
-
 $border-width:                1px !default;
-$border-color:                $gray-300 !default;
+$border-color-default:        $border-color !default;
 
-$border-radius:               .25rem !default;
+$border-radius:               0 !default;
 $border-radius-lg:            .3rem !default;
 $border-radius-sm:            .2rem !default;
 
@@ -198,7 +208,7 @@ $btn-padding-x-lg:            1rem !default;
 $btn-font-size-lg:            $font-size-lg !default;
 
 // 按钮边框
-$btn-border-width:            $border-width !default;
+$btn-border-width:            $border-color !default;
 
 // 按钮其他
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
@@ -207,15 +217,18 @@ $btn-disabled-opacity:        .65 !default;
 // 链接按钮
 $btn-link-color:              $link-color !default;
 $btn-link-hover-color:        $link-hover-color !default;
-$btn-link-disabled-color:     $gray-600 !default;
+$btn-link-disabled-color:     $highlight !default;
 
 
 // 按钮 radius
 $btn-border-radius:           $border-radius !default;
 $btn-border-radius-lg:        $border-radius-lg !default;
 $btn-border-radius-sm:        $border-radius-sm !default;
-
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
+
+
+
 
 // menu
 $menu-border-width:            $border-width !default;
