@@ -1,8 +1,14 @@
 import React from "react";
 
+import {ButtonBase} from "./ButtonBase";
+
 const ButtonDoc: React.FC = () => {
+
   return (
-    <div>ButtonDoc</div>
+    <div>
+      <ButtonBase/>
+    </div>
   )
 }
+
 export {ButtonDoc}
