@@ -41,6 +41,9 @@ const Doc = () => {
           <li>
             <NavLink to="/doc/button" activeClassName="link-active">Button 按钮</NavLink>
           </li>
+          <li>
+            <NavLink to="/doc/Menu" activeClassName="link-active">Menu 菜单</NavLink>
+          </li>
         </ul>
       </aside>
         <Main/>
@@ -49,4 +52,4 @@ const Doc = () => {
   )
 }
 
-export {Doc}
+export { Doc }
