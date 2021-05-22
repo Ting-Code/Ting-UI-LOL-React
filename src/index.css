@@ -25,3 +25,12 @@ i, em {font-style: normal;}
 input, textarea, button, select, a {outline: none;border: none;}
 table {border-collapse: collapse;border-spacing: 0;}
 img {border: none;vertical-align: middle;}
+
+.App{
+  /*background: white;*/
+  /*background: #010a13;*/
+  background: url("./view/img/backgrond.jpg") no-repeat center;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  min-height: 100vh;
+}

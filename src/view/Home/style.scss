@@ -1,15 +1,16 @@
 .home{
   width: 100%;
   color: #747d8c;
+  background: rgba(5, 17, 26, 0.9);
+  height: 100vh;
   .main{
-    margin: 120px 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-content: center;
     .title{
+      margin: 120px auto 0;
       font-size: 32px;
-      margin: 0 auto;
       color: #57606f;
     }
     .declare{
