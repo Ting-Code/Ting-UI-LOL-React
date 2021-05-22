@@ -1,23 +1,25 @@
 import React from "react";
 import classNames from "classnames";
+import Icon from "../Icon/Icon";
 
 interface BaseButtonProps{
   className?: string;
   disabled?: boolean;
   size?: 'lg' | 'sm';
   href?: string;
-  types?: 'primary' | 'default' | 'danger' | 'link';
+  types?: 'icon' | 'default' | 'primary' | 'link' | 'glory';
+  name: string
 }
 type NativeButtonProps = BaseButtonProps & React.ButtonHTMLAttributes<HTMLElement>
 type AnchorButtonProps = BaseButtonProps & React.AnchorHTMLAttributes<HTMLElement>
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
 const Button: React.FC<ButtonProps> = (props) => {
-  const {disabled, size, types, href, children, className, ...restProps} = props
+  const {name, disabled, size, types, href, children, className, ...restProps} = props
 
   const btnClass = classNames('ting-button', className, {
     [`ting-button-${types}`]: types,
     [`ting-button-${size}`]: size,
-    'disabled': (types === 'link') && disabled
+    'disabled': disabled
   })
 
   if (types === 'link' && href ) {
@@ -26,7 +28,13 @@ const Button: React.FC<ButtonProps> = (props) => {
         {children}
       </a>
     )
-  } else {
+  } else if(types === "icon" && name){
+    return (
+      <button className={btnClass} disabled={disabled} {...restProps}>
+        <Icon name={name}/>
+      </button>
+    )
+  }else {
     return (
       <button className={btnClass} disabled={disabled} {...restProps}>
         {children}

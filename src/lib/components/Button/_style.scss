@@ -3,11 +3,10 @@
   display: inline-block;
   font-weight: $btn-font-weight;
   line-height: $btn-line-height;
-  color: $body-color;
+  color: $default;
   white-space: nowrap;
   text-align: center;
   vertical-align: middle;
-  background-image: none;
   border: $btn-border-width solid transparent;
   @include button-size( $btn-padding-y,  $btn-padding-x,  $btn-font-size,  $border-radius);
   box-shadow: $btn-box-shadow;
@@ -24,21 +23,148 @@
   }
 }
 
+.ting-button-default {
+  border: 1px solid $border-color;
+  @include button-style($background-color, $border-color, $default);
+  &:hover{
+    color: $highlight;
+    background: rgb(205,190,145);
+    background: linear-gradient(0deg, rgba(205,190,145,1) 0%, rgba(153,147,119,1) 0%, rgba(121,120,103,1) 11%, rgba(12,31,50,1) 96%);
+  }
+  &:active{
+    color: $avtive-color;
+    //background: rgb(240,230,210);
+    //background: linear-gradient(0deg, rgba(240,230,210,1) 8%, rgba(149,151,146,1) 9%, rgba(196,192,179,1) 11%, rgba(78,89,97,1) 29%, rgba(69,81,90,1) 38%, rgba(43,58,72,1) 66%, rgba(12,31,50,1) 84%);
+    border: 1px solid $avtive-color;
+  }
+  &.disabled,
+  &[disabled] {
+    @include button-style($background-color, $border-color, $default);
+    cursor: not-allowed;
+    opacity: 0.5;
+    box-shadow: none;
+    > * {
+      pointer-events: none;
+    }
+  }
+}
+
+.ting-button-primary {
+  color: $primary;
+  background:url(./img/btn_pg_ok.png) no-repeat center;
+  min-width: 120px;
+  background-size:100% 100%;
+  box-shadow: none;
+  &:hover{
+    color: $primary-height;
+    background:url(./img/btn_pg_ok_hover.png) no-repeat center;
+    background-size:100% 100%;
+  }
+  &:active{
+    color: $primary;
+    background:url(./img/btn_pg_ok_pressed.png) no-repeat center;
+    background-size:100% 100%;
+  }
+  &.disabled,
+  &[disabled] {
+    color: $primary;
+    cursor: not-allowed;
+    opacity: 0.6;
+    box-shadow: none;
+    background:url(./img/btn_pg_ok_pressed.png) no-repeat center;
+    background-size:100% 100%;
+    &:hover{
+      background:url(./img/btn_pg_ok_pressed.png) no-repeat center;
+      background-size:100% 100%;
+    }
+  }
+}
+
+.ting-button-glory {
+  background:url(./img/button_fwq_00.png) no-repeat center;
+  min-width: 120px;
+  background-size:112% 136%;
+  box-shadow: none;
+
+  &:hover{
+    color: $highlight;
+    background:url(./img/button_fwq_02.png) no-repeat center;
+    background-size:112% 136%;
+  }
+  &:active{
+    color: $avtive-color;
+    background:url(./img/button_fwq_03.png) no-repeat center;
+    background-size:112% 136%;
+  }
+  &.disabled,
+  &[disabled] {
+    color: $default;
+    cursor: not-allowed;
+    opacity: 0.6;
+    box-shadow: none;
+    background:url(./img/button_fwq_01.png) no-repeat center;
+    background-size:112% 136%;
+    &:hover{
+      background:url(./img/button_fwq_01.png) no-repeat center;
+      background-size:112% 136%;
+    }
+  }
+}
+
+.ting-button-icon {
+  padding: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: $background-color;
+  border: 2px solid $border-color;
+  .ting-icon{
+    width: 2em;
+    height: 2em;
+    fill: $default;
+  }
+  &:hover{
+    color: $highlight;
+    //background: rgb(240,230,210);
+    //background: linear-gradient(0deg, rgba(240,230,210,1) 8%, rgba(149,151,146,1) 9%, rgba(196,192,179,1) 11%, rgba(78,89,97,1) 29%, rgba(69,81,90,1) 38%, rgba(43,58,72,1) 66%, rgba(12,31,50,1) 84%);
+    border: 2px solid $highlight;
+    .ting-icon{
+      fill: $highlight;
+    }
+  }
+  &:active{
+    color: $avtive-color;
+    //background: rgb(240,230,210);
+    //background: linear-gradient(0deg, rgba(240,230,210,1) 8%, rgba(149,151,146,1) 9%, rgba(196,192,179,1) 11%, rgba(78,89,97,1) 29%, rgba(69,81,90,1) 38%, rgba(43,58,72,1) 66%, rgba(12,31,50,1) 84%);
+    border: 2px solid $avtive-color;
+    .ting-icon{
+      fill: $avtive-color;
+    }
+  }
+  &.disabled,
+  &[disabled] {
+    color: $default;
+    cursor: not-allowed;
+    opacity: 0.6;
+    box-shadow: none;
+    border: 2px solid $border-color;
+    &:hover{
+      .ting-icon{
+        width: 2em;
+        height: 2em;
+        fill: $default;
+      }
+    }
+  }
+}
+
 .ting-button-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
 }
 .ting-button-sm {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
 }
-.ting-button-primary {
-  @include button-style($primary, $primary, $white)
-}
-.ting-button-danger {
-  @include button-style($danger, $danger, $white)
-}
-.ting-button-default {
-  @include button-style($white, $gray-400, $body-color, $white, $primary, $primary)
-}
+
 
 .ting-button-link {
   font-weight: $font-weight-normal;
@@ -56,6 +182,7 @@
   }
   &:disabled,
   &.disabled {
+    cursor: not-allowed;
     color: $btn-link-disabled-color;
     pointer-events: none;
   }
