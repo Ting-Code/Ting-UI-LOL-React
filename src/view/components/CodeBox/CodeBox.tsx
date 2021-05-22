@@ -40,7 +40,7 @@ const CodeBox:React.FC<ICodeProps> = (props) => {
       {/*展示代码的地方*/}
       <div className="fold-code">
         <div className="demo-wrapper">
-          <pre>{props.children}</pre>
+          {props.children}
         </div>
         <div className="per-wrapper">
           <div className="per-content" style={{height:height+'px'}}>
