@@ -1,11 +1,13 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect} from "react";
 import { Link } from "react-router-dom";
 import './style.scss'
 import {AsideContext} from "../../App";
 
 const Home = () => {
-  const {setAside} = useContext(AsideContext);
-  setAside(false)
+  const {setAsideFn} = useContext(AsideContext);
+  useEffect(() => {
+    setAsideFn(false)
+  })
   return(
     <div className="home">
       <div className="main">
