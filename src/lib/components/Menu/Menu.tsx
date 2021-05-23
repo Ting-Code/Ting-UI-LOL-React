@@ -24,8 +24,8 @@ interface IMenuContext {
 const MenuContext = createContext<IMenuContext>({index: '0'})
 
 
-const Menu: React.FC<MenuProps> = (props) => {
-  const { className, mode, style, children, defaultIndex, onSelect, defaultOpenSubMenus } = props
+const Menu: React.FC<MenuProps & React.HTMLAttributes<HTMLUListElement>> = (props) => {
+  const { className, mode, style, children, defaultIndex, onSelect, defaultOpenSubMenus, ...restProps} = props
   const [ currentActive, setActive ] = useState(defaultIndex)
   //统一处理选中变化后
   const handleClick = (index: string) => {
@@ -58,7 +58,7 @@ const Menu: React.FC<MenuProps> = (props) => {
   }
 
   return (
-    <ul className={classes} style={style} data-testid="test-menu">
+    <ul className={classes} style={style} data-testid="test-menu" {...restProps}>
       <MenuContext.Provider value={passedContext}>
         {renderChildren()}
       </MenuContext.Provider>
