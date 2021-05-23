@@ -51,6 +51,7 @@ const Spread: React.FC<TransitionProps & CSSTransitionProps> = (props) => {
     }
   }
   const enter = (el:HTMLElement) => {
+    console.log(el.scrollWidth);
     setOldOverflow(el.style.overflow)
     if (animation === "horizontal" && el.scrollWidth !== 0) {
       el.style.width = el.scrollWidth + 'px';
