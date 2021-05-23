@@ -4,11 +4,11 @@ import './style.scss'
 import {AsideContext} from "../../../App";
 
 const Topnav = () => {
-  const {asideVisible, setAsideVisible, aside} = useContext(AsideContext);
+  const {asideVisible, setAsideVisibleFn, aside} = useContext(AsideContext);
   return (
     <div className="topnav">
       {
-        aside ? <div onClick={() => {setAsideVisible(!asideVisible)}} className="toggleAside">
+        aside ? <div onClick={() => {setAsideVisibleFn(!asideVisible)}} className="toggleAside">
           <svg className="icon" aria-hidden="true">
             <use xlinkHref="#icon-menu"></use>
           </svg>

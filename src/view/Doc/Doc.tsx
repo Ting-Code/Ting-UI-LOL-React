@@ -5,27 +5,26 @@ import {Main} from "../components/Main/Main";
 import './style.scss'
 
 const Doc = () => {
-  const {asideVisible, setAsideVisible, setAside} = useContext(AsideContext);
-  setAside(true)
-  console.log(asideVisible);
+  const {asideVisible, setAsideVisibleFn, setAsideFn} = useContext(AsideContext);
   const asideDisplay = asideVisible ? "flex" : "none";
   useEffect(() => {
+    setAsideFn(true)
     const width = document.documentElement.clientWidth
     if(width > 500){
-      setAsideVisible(true)
+      setAsideVisibleFn(true)
     }
   })
   const onChangeAside = (e: React.MouseEvent) => {
     if(e.target instanceof HTMLAnchorElement){
-      setAsideVisible(false)
+      setAsideVisibleFn(false)
     }
   }
   return (
     <HashRouter>
-      <div className="content">
+      <div className="content" onClick={onChangeAside}>
         <aside style={{display: asideDisplay}} className="aside-menu">
         <h2>文档</h2>
-        <ul onClick={onChangeAside}>
+        <ul>
           <li>
             <NavLink to="/doc/intro" activeClassName="link-active">介绍</NavLink>
           </li>
