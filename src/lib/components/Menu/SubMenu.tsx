@@ -3,13 +3,15 @@ import classNames from 'classnames'
 import { MenuContext } from './Menu'
 import { MenuItemProps } from './MenuItem'
 import Icon from '../Icon/Icon'
-import Transition from '../Transition/Transition'
+import {Spread} from "../Transition/Spread";
+import Transition from "../Transition/Transition";
 export interface SubMenuProps {
   index?: string;
   title: string;
   className?: string;
 }
-const SubMenu: React.FC<SubMenuProps> = ({ index, title, children, className}) => {
+const SubMenu: React.FC<SubMenuProps & React.LiHTMLAttributes<HTMLLIElement>> = (props) => {
+  const { index, title, children, className, ...restProps} = props
   const context = useContext(MenuContext)
   const openedSubMenus = context.defaultOpenSubMenus as Array<string>
   const isOpend = (index && context.mode === 'vertical') ? openedSubMenus.includes(index) : false
@@ -55,20 +57,34 @@ const SubMenu: React.FC<SubMenuProps> = ({ index, title, children, className}) =
         console.error("Warning: SubMenu has a child which is not a MenuItem component")
       }
     })
+    const Animation = () => {
+      if(context.mode === 'vertical'){
+        return ( <Spread
+          in={menuOpen}
+          timeout={300}
+          animation="vertical"
+        >
+          <ul className={subMenuClasses} style={{border: '1px solid red'}}>
+            {childrenComponent}
+          </ul>
+        </Spread>)
+      }else {
+        return ( <Transition
+          in={menuOpen}
+          timeout={300}
+        >
+          <ul className={subMenuClasses}>
+            {childrenComponent}
+          </ul>
+        </Transition>)
+      }
+    }
     return (
-      <Transition
-        in={menuOpen}
-        timeout={3000}
-        animation="zoom-in-top"
-      >
-        <ul className={subMenuClasses}>
-          {childrenComponent}
-        </ul>
-      </Transition>
+      Animation()
     )
   }
   return (
-    <li key={index} className={classes} {...hoverEvents}>
+    <li key={index} className={classes} {...hoverEvents} {...restProps}>
       <div className="submenu-title" {...clickEvents}>
         {title}
         <Icon name="down" className="arrow-icon"/>
