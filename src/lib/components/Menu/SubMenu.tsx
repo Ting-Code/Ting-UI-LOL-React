@@ -27,12 +27,11 @@ const SubMenu: React.FC<SubMenuProps & React.LiHTMLAttributes<HTMLLIElement>> = 
   }
   let timer: any
   const handleMouse = (e: React.MouseEvent, toggle: boolean) => {
-    // clearTimeout(timer)
-    setOpen(toggle)
+    clearTimeout(timer)
     e.preventDefault()
-    // timer = setTimeout(() => {
-    //
-    // }, 3000)
+    timer = setTimeout(() => {
+      setOpen(toggle)
+    }, 300)
   }
   const clickEvents = context.mode === 'vertical' ? {
     onClick: handleClick
@@ -75,7 +74,6 @@ const SubMenu: React.FC<SubMenuProps & React.LiHTMLAttributes<HTMLLIElement>> = 
           <Transition
           in={menuOpen}
           timeout={3000}
-          unmountOnExit={false}
           animation="zoom-in-top"
         >
           <ul className={subMenuClasses}>
