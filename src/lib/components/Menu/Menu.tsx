@@ -73,4 +73,4 @@ Menu.defaultProps = {
 }
 
 export {Menu, MenuContext};
-export type {MenuProps}
+export type { MenuProps }
