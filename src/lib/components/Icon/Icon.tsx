@@ -8,12 +8,15 @@ try {importAll(require.context('./icons', true, /\.svg$/));} catch (error) {cons
 
 interface IconProps extends React.SVGAttributes<SVGElement> {
   name: string;
+  spin?: boolean
 }
 
-const Icon: React.FunctionComponent<IconProps> = ({className, name, ...restProps}) => {
+const Icon: React.FunctionComponent<IconProps> = ({className, name, spin,...restProps}) => {
   return (
     <svg
-      className={classNames('ting-icon', className)}
+      className={classNames('ting-icon', className, {
+        'spin': spin
+      })}
       {...restProps}
     >
       <use xlinkHref={'#' + name}/>
