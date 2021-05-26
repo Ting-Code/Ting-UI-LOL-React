@@ -41,7 +41,13 @@ const Doc = () => {
             <NavLink to="/doc/button" activeClassName="link-active">Button 按钮</NavLink>
           </li>
           <li>
-            <NavLink to="/doc/Menu" activeClassName="link-active">Menu 菜单</NavLink>
+            <NavLink to="/doc/menu" activeClassName="link-active">Menu 菜单</NavLink>
+          </li>
+          <li>
+            <NavLink to="/doc/input" activeClassName="link-active">Input 表单</NavLink>
+          </li>
+          <li>
+            <NavLink to="/doc/upload" activeClassName="link-active">Upload 上传</NavLink>
           </li>
         </ul>
       </aside>
