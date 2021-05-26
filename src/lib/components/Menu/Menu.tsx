@@ -15,6 +15,7 @@ interface MenuProps {
   /**设置子菜单的默认打开 只在纵向模式下生效 */
   defaultOpenSubMenus?: string[];
 }
+
 interface IMenuContext {
   index: string;
   onSelect?: (selectedIndex: string) => void;
@@ -48,7 +49,7 @@ const Menu: React.FC<MenuProps & React.HTMLAttributes<HTMLUListElement>> = (prop
   const renderChildren = () => {
     //遍历子组件由React提供的Map
     return React.Children.map(children, (child, index) => {
-      const {displayName} = (child as React.FunctionComponentElement<MenuItemProps>).type
+      const { displayName } = (child as React.FunctionComponentElement<MenuItemProps>).type
       if(displayName === 'MenuItem' || displayName === 'SubMenu'){
         return React.cloneElement(child as React.FunctionComponentElement<MenuItemProps>, {index:index.toString()})
       }else {
