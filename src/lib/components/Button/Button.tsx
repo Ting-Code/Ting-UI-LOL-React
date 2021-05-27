@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import Icon from "../Icon/Icon";
+import {Icon} from "../Icon/Icon";
 
 interface BaseButtonProps{
   className?: string;
@@ -48,4 +48,5 @@ Button.defaultProps = {
   types: 'default',
 }
 
-export default Button
+export {Button};
+export type { BaseButtonProps };

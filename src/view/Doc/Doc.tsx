@@ -49,6 +49,9 @@ const Doc = () => {
           <li>
             <NavLink to="/doc/upload" activeClassName="link-active">Upload 上传</NavLink>
           </li>
+          <li>
+            <NavLink to="/doc/progress" activeClassName="link-active">Progress 进度条</NavLink>
+          </li>
         </ul>
       </aside>
         <Main/>
