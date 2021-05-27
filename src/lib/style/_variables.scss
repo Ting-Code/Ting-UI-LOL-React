@@ -38,14 +38,14 @@ $border-color-highlight: #efe4d4;
 //点击颜色
 $avtive-color: #7e6531;
 
+
 //青色按钮字体颜色
 $primary: #a3c7c7;
 //青色高亮
 $primary-height: #f0e6d2;
 
 
-
-
+//https://tingcygf.gitee.io/ting-ui-vue3/#/
 
 
 
@@ -65,7 +65,7 @@ $body-text-align:           null !default;
 // 字体大小
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:                $font-size-base * 1.25 !default;
-$font-size-sm:                $font-size-base * .875 !default;
+$font-size-sm:                $font-size-base * .8 !default;
 $font-size-root:              null !default;
 
 // 字重

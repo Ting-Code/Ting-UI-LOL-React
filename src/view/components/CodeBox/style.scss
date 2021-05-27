@@ -1,23 +1,24 @@
 .reveal-container{
   margin-top: 20px;
   > h2{
-    font-size: 26px;
-    margin: 8px;
+    color: #f0e6d2;
+    font-size: 22px;
+    margin: 56px 8px 8px;
   }
-  > p{
+  p{
+    color: #cdbe91;
     font-size: 14px;
     margin: 8px;
 
     > code{
       border-radius: 1px;
-      background: rgba(33, 45, 37, 0);
+      background: rgba(164, 184, 171, 0.5);
       padding: 1px;
-      margin: 6px;
+      margin: 4px;
     }
   }
 
   .fold-code{
-
     border: 2px solid #c89f48;
     .demo-wrapper{
       padding: 16px 18px;
@@ -30,14 +31,14 @@
       overflow: hidden;
       .per-content{
         overflow-y: hidden;
-        background: rgb(28, 29, 29);
+        background: rgba(149, 155, 154, 0.1);
         transition: all 0.25s;
         #code-wrapper{
           font-size: 14px;
           word-break: break-word;
           overflow: auto;
           &>pre{
-            background: rgb(26, 33, 38) !important;
+            background: rgba(183, 196, 190, 0) !important;
             > .language-jsx{
               overflow: auto !important;
               white-space: break-spaces !important;
@@ -50,8 +51,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #f1f2f6;
-        padding: 8px;
+        background: rgba(183, 196, 190, 0);
+
 
         .down{
           width: 18px;

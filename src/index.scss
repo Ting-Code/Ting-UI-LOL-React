@@ -33,4 +33,12 @@ img {border: none;vertical-align: middle;}
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: hidden;
+  .topnav{
+    flex: 0;
+  }
 }
