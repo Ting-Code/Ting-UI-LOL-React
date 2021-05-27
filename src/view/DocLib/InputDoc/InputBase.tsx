@@ -1,7 +1,7 @@
 import React from "react";
-import {CodeBox} from "../../CodeBox/CodeBox";
-import Input from "../../../../lib/components/Input/Input";
-import AutoComplete, {DataSourceType} from "../../../../lib/components/AutoInput/AutoInput";
+import {CodeBox} from "../../components/CodeBox/CodeBox";
+import Input from "../../../lib/components/Input/Input";
+import {AutoInput, DataSourceType} from "../../../lib/components/AutoInput/AutoInput";
 
 const InputBase:React.FC = () => {
   const code = `
@@ -32,18 +32,18 @@ const InputBase:React.FC = () => {
   return (
     <CodeBox
       title="基础使用"
-      description="描述"
+      description={<p> </p>}
       defaultVisible={true}
       code={code}>
       <Input icon={"edit"} disabled/>
-      <AutoComplete
+      <AutoInput
         fetchSuggestions={handleFetch}
         onSelect={(item) => {
           console.log(item);
         }}
         placeholder="输入湖人队球员英文名试试"
       />
-      <AutoComplete
+      <AutoInput
         fetchSuggestions={handleFetch2}
         placeholder="输入 Github 用户名试试"
         renderOption={renderOption}

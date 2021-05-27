@@ -1,21 +1,21 @@
 import React, { FC, useState, ChangeEvent, KeyboardEvent, ReactElement, useEffect, useRef } from 'react'
 import classNames from 'classnames'
 import Input, { InputProps } from '../Input/Input'
-import Icon from "../Icon/Icon";
-import Transition from "../Transition/Transition";
+import {Icon} from "../Icon/Icon";
+import {Transition} from "../Transition/Transition";
 import useDebounce from '../../hooks/useDebounce'
 import useClickOutside from '../../hooks/useClickOutside'
 interface DataSourceObject {
   value: string;
 }
-export type DataSourceType<T = {}> = T & DataSourceObject
-export interface AutoCompleteProps extends Omit<InputProps, 'onSelect'> {
+type DataSourceType<T = {}> = T & DataSourceObject
+interface AutoCompleteProps extends Omit<InputProps, 'onSelect'> {
   fetchSuggestions: (str: string) => DataSourceType[] | Promise<DataSourceType[]>;
   onSelect?: (item: DataSourceType) => void;
   renderOption?: (item: DataSourceType) => ReactElement;
 }
 
-export const AutoComplete: FC<AutoCompleteProps> = (props) => {
+const AutoInput: FC<AutoCompleteProps> = (props) => {
   const {
     fetchSuggestions,
     onSelect,
@@ -142,5 +142,6 @@ export const AutoComplete: FC<AutoCompleteProps> = (props) => {
   )
 }
 
-export default AutoComplete;
+export { AutoInput };
+export type { DataSourceType, AutoCompleteProps};
 

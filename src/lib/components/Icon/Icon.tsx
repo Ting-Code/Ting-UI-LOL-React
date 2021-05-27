@@ -24,4 +24,5 @@ const Icon: React.FunctionComponent<IconProps> = ({className, name, spin,...rest
   );
 };
 
-export default Icon;
+export {Icon};
+export type { IconProps };

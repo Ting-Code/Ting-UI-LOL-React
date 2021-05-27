@@ -1,7 +1,7 @@
 import React from "react";
-import {Menu, MenuItem} from "../../../../lib";
-import {CodeBox} from "../../CodeBox/CodeBox";
-import {SubMenu} from "../../../../lib/components/Menu/SubMenu";
+import {Menu, MenuItem} from "../../../lib";
+import {CodeBox} from "../../components/CodeBox/CodeBox";
+import {SubMenu} from "../../../lib/components/Menu/SubMenu";
 
 
 const MenuBase:React.FC = () => {
@@ -11,7 +11,7 @@ const MenuBase:React.FC = () => {
   return (
     <CodeBox
       title="基础使用"
-      description="描述"
+      description={<p> </p>}
       defaultVisible={true}
       code={code}>
       <Menu defaultIndex={'2'} mode="horizontal">

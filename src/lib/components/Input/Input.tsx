@@ -1,6 +1,6 @@
 import React, { FC, ReactElement, InputHTMLAttributes, ChangeEvent } from 'react'
 import classNames from 'classnames'
-import Icon from "../Icon/Icon";
+import {Icon} from "../Icon/Icon";
 
 type InputSize = 'lg' | 'sm'
 export interface InputProps extends Omit<InputHTMLAttributes<HTMLElement>, 'size' > {
