@@ -15,10 +15,11 @@ const DialogBase:React.FC = () => {
       description={<p><code>types</code>属性定义按键样式</p>}
       defaultVisible={true}
       code={code}>
-      <Dialog>aaa</Dialog>
+      <Dialog>
+        abc
+      </Dialog>
     </CodeBox>
   )
 }
 
-
-export {DialogBase};
+export { DialogBase };
