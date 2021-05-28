@@ -1,6 +1,5 @@
 import React from "react";
 import './style.scss'
-import {it} from "jest-circus";
 
 interface AttrProps {
   data: { params: string; desc: string; type: string; select: string;default: string }[];
@@ -29,10 +28,10 @@ const Attr:React.FC<AttrProps> = (props) => {
         <tbody>
         {
           props.data.map((item, index) => (
-          <tr>
+          <tr key={index}>
             {
               Object.keys(item).map((key, index) => (
-                <td className="attr-title td">{item[key as keyof typeof item]}</td>
+                <td className="attr-title td" key={index}>{item[key as keyof typeof item]}</td>
               ))
             }
           </tr>

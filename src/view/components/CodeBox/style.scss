@@ -1,4 +1,5 @@
 .reveal-container{
+  width: 100%;
   margin-top: 20px;
   > h2{
     color: #f0e6d2;
@@ -52,8 +53,9 @@
         justify-content: center;
         align-items: center;
         background: rgba(183, 196, 190, 0);
-
-
+        button {
+          margin: 6px;
+        }
         .down{
           width: 18px;
           height: 18px;

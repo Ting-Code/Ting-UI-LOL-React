@@ -3,11 +3,9 @@ import {Button} from "../../../lib";
 import {CodeBox} from "../../components/CodeBox/CodeBox";
 
 const ButtonSize:React.FC = () => {
-  const code = `<Button disabled>普通按钮</Button>
-<Button disabled types={"link"} href={"http://localhost:3000/#/doc/button"}>a连接</Button>
-<Button disabled types={"glory"}>辉煌</Button>
-<Button disabled types={"primary"}>主要蓝色</Button>
-`
+const code = `<Button size='sm'>小按钮</Button>
+<Button>默认按钮</Button>
+<Button size='lg'>大按钮</Button>`
 
   return (
     <CodeBox

@@ -9,7 +9,7 @@ const Home = () => {
     setAsideFn(false)
   })
   return(
-    <div className="home">
+    <div className="ting-home">
       <div className="main">
         <p className="title">TING UI</p>
         <p className="declare">基于React的UI框架</p>

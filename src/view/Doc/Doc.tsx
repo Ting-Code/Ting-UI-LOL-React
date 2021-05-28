@@ -16,12 +16,15 @@ const Doc = () => {
   })
   const onChangeAside = (e: React.MouseEvent) => {
     if(e.target instanceof HTMLAnchorElement){
-      setAsideVisibleFn(false)
+      const width = document.documentElement.clientWidth
+      if(width < 500){
+        setAsideVisibleFn(false)
+      }
     }
   }
   return (
     <HashRouter>
-      <div className="content" onClick={onChangeAside}>
+      <div className="ting-content" onClick={onChangeAside}>
         <aside style={{display: asideDisplay}} className="aside-menu">
         <h2>文档</h2>
         <ul>
@@ -51,6 +54,9 @@ const Doc = () => {
           </li>
           <li>
             <NavLink to="/doc/progress" activeClassName="link-active">Progress 进度条</NavLink>
+          </li>
+          <li>
+            <NavLink to="/doc/dialog" activeClassName="link-active">Dialog 对话框</NavLink>
           </li>
         </ul>
       </aside>

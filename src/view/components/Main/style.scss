@@ -9,10 +9,6 @@
 
 @media(max-width: 500px) {
   .main-doc{
-    min-height: 100vh;
-    display: flex;
-    flex-grow: 1;
-    overflow: auto;
     padding: 80px 6px 0 6px;
   }
 }
