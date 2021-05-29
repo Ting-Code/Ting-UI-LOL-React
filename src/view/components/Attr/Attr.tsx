@@ -15,30 +15,32 @@ const Attr:React.FC<AttrProps> = (props) => {
     {title: '默认值'},
   ]
   return (
-    <div className="attr">
-      <h2>{props.title}</h2>
-      <table className="attr-table">
-        <thead>
-        <tr>
-          {columns.map((item, index) => (
+    <div className="ting-attr">
+      <div className="attr">
+        <h2>{props.title}</h2>
+        <table className="attr-table">
+          <thead>
+          <tr>
+            {columns.map((item, index) => (
               <th className="attr-title" key={index}>{item.title}</th>
             ))}
-        </tr>
-        </thead>
-        <tbody>
-        {
-          props.data.map((item, index) => (
-          <tr key={index}>
-            {
-              Object.keys(item).map((key, index) => (
-                <td className="attr-title td" key={index}>{item[key as keyof typeof item]}</td>
-              ))
-            }
           </tr>
-          ))
-        }
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+          {
+            props.data.map((item, index) => (
+              <tr key={index}>
+                {
+                  Object.keys(item).map((key, index) => (
+                    <td className="attr-title td" key={index}>{item[key as keyof typeof item]}</td>
+                  ))
+                }
+              </tr>
+            ))
+          }
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }

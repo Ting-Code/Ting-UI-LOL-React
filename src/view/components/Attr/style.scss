@@ -1,34 +1,40 @@
-.attr {
+.ting-attr{
   width: 100%;
-  overflow-x: auto;
-  white-space: nowrap;
-  h2 {
-    font-weight: 400;
-    color: #f0e6d2;
-    font-size: 22px;
-    margin: 56px 8px 8px;
-  }
-
-  .attr-table {
+  margin-bottom: 20px;
+  overflow-y: hidden;
+  .attr {
     width: 100%;
-    border-collapse: collapse;
-    background-color: rgba(107, 105, 105, 0.1);
-    font-size: 14px;
-    margin-bottom: 45px;
-    line-height: 1.5em;
-  }
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    h2 {
+      font-weight: 400;
+      color: #f0e6d2;
+      font-size: 22px;
+      margin: 56px 8px 8px;
+    }
 
-  .attr-title {
-    text-align: left;
-    color: #cabc93;
-    font-weight: 400;
-    border-bottom: 1px solid #c89f48;
-    padding: 16px;
-    max-width: 250px;
-  }
+    .attr-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: rgba(107, 105, 105, 0.1);
+      font-size: 14px;
+      margin-bottom: -1px;
+      line-height: 1.5em;
+    }
 
-  .td {
-    color: #8d8363;
-    border-bottom: 1px solid #c89f48;
+    .attr-title {
+      text-align: left;
+      color: #cabc93;
+      font-weight: 400;
+      border-bottom: 1px solid #c89f48;
+      padding: 16px;
+      max-width: 250px;
+    }
+
+    .td {
+      color: #8d8363;
+      border-bottom: 1px solid #c89f48;
+    }
   }
 }
