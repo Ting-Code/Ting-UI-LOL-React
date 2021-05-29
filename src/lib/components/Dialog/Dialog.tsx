@@ -49,7 +49,7 @@ const Dialog: React.FC<DialogProps> = (props) => {
         </div>
         <header className='ting-dialog-header'>{title}</header>
         <main className='ting-dialog-main'>
-          <p>{props.children}</p>
+          <div>{props.children}</div>
         </main>
         {showButton()}
       </div>
