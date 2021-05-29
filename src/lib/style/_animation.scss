@@ -3,3 +3,74 @@
 @include zoom-animation('right', scale(.45, .45), scale(1, 1), top right);
 @include zoom-animation('bottom', scaleY(0), scaleY(1),  center bottom);
 @include zoom-animation('open', scale(0, 0), scale(1, 1),  center center);
+
+.zoom-in-x-enter {
+  opacity: 0;
+  transform: translateX(10vw);
+}
+.zoom-in-x-enter-active {
+  opacity: 1;
+  transform: translateX(0vw);
+  transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+}
+.zoom-in-x-exit {
+  opacity: 1;
+  transform: translateX(0vw);
+}
+.zoom-in-x-exit-active {
+  opacity: 0;
+  transform: translateX(10vw);
+  transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+}
+.zoom-in-x-exit-done{
+  display: none;
+}
+
+.zoom-in-y-enter {
+  opacity: 0;
+  transform: translateY(10vh);
+}
+.zoom-in-y-enter-active {
+  opacity: 1;
+  transform: translateY(0vh);
+  transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+}
+.zoom-in-y-exit {
+  opacity: 1;
+  transform: translateY(0vh);
+}
+.zoom-in-y-exit-active {
+  opacity: 0;
+  transform: translateY(10vh);
+  transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+}
+.zoom-in-x-exit-done{
+  display: none;
+}
+
+
+.ting-dialog-transition{
+
+  &.zoom-in-y-enter {
+    opacity: 0;
+    transform: translateY(0vh);
+  }
+  &.zoom-in-y-enter-active {
+    opacity: 1;
+    transform: translateY(-50vh);
+    transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+  }
+  &.zoom-in-y-exit {
+    opacity: 1;
+    transform: translateY(-50vh);
+  }
+  &.zoom-in-y-exit-active {
+    opacity: 0;
+    transform: translateY(0vh);
+    transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+  }
+  &.zoom-in-x-exit-done{
+    display: none;
+  }
+}
+
