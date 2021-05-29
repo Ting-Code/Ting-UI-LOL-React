@@ -3,7 +3,7 @@ import './style.scss'
 import {Attr} from "../../components/Attr/Attr";
 import {DialogBase} from "./DialogBase";
 
-const ButtonDoc: React.FC = () => {
+const DialogDoc: React.FC = () => {
   const date = [
     {
       params: 'types',
@@ -51,4 +51,4 @@ const ButtonDoc: React.FC = () => {
   )
 }
 
-export {ButtonDoc}
+export {DialogDoc}
