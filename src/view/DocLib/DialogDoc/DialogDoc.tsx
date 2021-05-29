@@ -47,6 +47,7 @@ const DialogDoc: React.FC = () => {
       <h2 className="doc-dialog">Dialog 对话框组件</h2>
       <DialogBase/>
       <Attr data={date} title="Attributes"/>
+      <Attr data={date} title="Attributes"/>
     </div>
   )
 }
