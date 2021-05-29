@@ -3,7 +3,7 @@ import React from "react";
 import {Dialog} from "./Dialog";
 
 interface content {
-  children: JSX.Element
+  children: string
   title: string
 }
 

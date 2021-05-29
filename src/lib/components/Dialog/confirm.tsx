@@ -4,7 +4,7 @@ import {Dialog} from "./Dialog";
 import {Button} from "../Button/Button";
 
 interface content {
-  children: JSX.Element
+  children: string
   title: string
 }
 
