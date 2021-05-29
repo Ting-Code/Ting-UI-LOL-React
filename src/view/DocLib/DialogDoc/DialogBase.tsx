@@ -3,28 +3,34 @@ import {CodeBox} from "../../components/CodeBox/CodeBox";
 import {Button, Dialog} from "../../../lib";
 
 const DialogBase:React.FC = () => {
-  const code = `<Button>普通按钮</Button>
-<Button types="glory">边框按钮</Button>
-<Button types="primary">蓝色主题</Button>
-<Button types="link" href={"https://tingcygf.gitee.io/ting-ui-vue3/#/"}>连接按钮</Button>`
+  const code = `  <Button types='primary' onClick={() => {setVisible(true)}}>弹出对话框</Button>
+<Dialog visible={visible}
+        onClose={() => {setVisible(false)}}
+        title="提示标题">
+  <p>弹出内容</p>
+</Dialog>`
 
   const [visible, setVisible] = useState(false)
   return (
     <CodeBox
       className="DialogBase"
       title="基础使用"
-      description={<p><code>types</code>属性定义按键样式</p>}
+      description={<p>
+        <code>visible</code>属性决定<code>Dialog</code>显示或隐藏，
+        点击遮罩或者X都能触发<code>onClose</code>
+      </p>}
       defaultVisible={true}
       code={code}>
+
       <Button types='primary' onClick={() => {
         setVisible(true)
-      }}>弹出内容</Button>
-      <Dialog visible={visible} onClose={() => {setVisible(false)}}
-      title="提示标题"
-
-      >
-        提示内容
+      }}>弹出对话框</Button>
+      <Dialog visible={visible}
+              onClose={() => {setVisible(false)}}
+              title="提示标题">
+        <p>弹出内容</p>
       </Dialog>
+
     </CodeBox>
   )
 }
