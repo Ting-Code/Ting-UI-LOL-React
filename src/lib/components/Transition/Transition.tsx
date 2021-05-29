@@ -2,7 +2,7 @@ import React from 'react'
 import { CSSTransition } from 'react-transition-group'
 import { CSSTransitionProps } from 'react-transition-group/CSSTransition'
 
-type AnimationName = 'zoom-in-top' | 'zoom-in-left' | 'zoom-in-bottom' | 'zoom-in-right' | 'zoom-in-open'
+type AnimationName = 'zoom-in-top' | 'zoom-in-left' | 'zoom-in-bottom' | 'zoom-in-right' | 'zoom-in-open' | 'zoom-in-x' | 'zoom-in-y';
 
 interface TransitionProps {
   animation?: AnimationName,
@@ -12,17 +12,18 @@ interface TransitionProps {
 const Transition: React.FC<TransitionProps & CSSTransitionProps> = (props) => {
   const {
     children,
-    classNames,
+    className,
     animation,
     wrapper,
     ...restProps
   } = props
+
   return (
     <CSSTransition
-      classNames = { classNames ? classNames : animation}
+      classNames = {animation}
       {...restProps}
     >
-      {wrapper ? <div>{children}</div> : children}
+      {wrapper ? <div className={className}>{children}</div> : children}
     </CSSTransition>
   )
 }

@@ -126,6 +126,7 @@ const Spread: React.FC<TransitionProps & CSSTransitionProps> = (props) => {
 
 
 Spread.defaultProps = {
+  animation: 'horizontal',
   unmountOnExit: true,
   appear: true,
   wrapper: true
