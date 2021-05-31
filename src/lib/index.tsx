@@ -11,3 +11,5 @@ export { Progress } from './components/Progress/Progress'
 export { Dialog } from './components/Dialog/Dialog'
 export { alert } from './components/Dialog/alert'
 export { confirm } from './components/Dialog/confirm'
+export { Popover } from './components/Popover/Popover'
+
