@@ -2,42 +2,29 @@ import React from "react";
 import './style.scss'
 import {Attr} from "../../components/Attr/Attr";
 import {PopoverBase} from "./PopoverBase";
+import {PopoverHover} from "./PopoverHover";
 
 const PopoverDoc: React.FC = () => {
   const date = [
     {
-      params: 'types',
-      desc: '按钮类型',
+      params: 'position',
+      desc: '弹出方向',
       type: 'string',
-      select: 'icon/default/primary/link/glory',
+      select: 'bottom/top/right/left',
       default: 'top',
     },
     {
-      params: 'disabled',
-      desc: '禁用状态',
-      type: 'boolean',
-      select: 'true/false',
-      default: 'false',
+      params: 'trigger',
+      desc: '触发方式:点击或悬浮',
+      type: 'string',
+      select: 'click/hover',
+      default: 'click',
     },
     {
-      params: 'size',
-      desc: '按钮大小',
-      type: 'string',
-      select: 'lg/sm/null',
-      default: 'null',
-    },
-    {
-      params: 'href',
-      desc: 'types为link时跳转地址',
-      type: 'string',
-      select: 'string',
-      default: '',
-    },
-    {
-      params: 'name',
-      desc: 'types为icon时的icon类型',
-      type: 'string',
-      select: 'string',
+      params: 'content',
+      desc: '弹出内容',
+      type: 'ReactElement',
+      select: '',
       default: '',
     },
   ]
@@ -46,6 +33,7 @@ const PopoverDoc: React.FC = () => {
     <div>
       <h2 className="doc-popover">Popover 提示框组件</h2>
       <PopoverBase/>
+      <PopoverHover/>
       <Attr data={date} title="Attributes"/>
     </div>
   )
