@@ -11,7 +11,6 @@ const Popover: React.FC<PopoverProps> = (props) => {
   const {position, trigger, content, children} = props;
   const [visible, setVisible] = useState(false)
   const visibleRef = useRef(visible);
-
   const contentWrapper = useRef<HTMLDivElement>(null)
   const triggerWrapper = useRef<HTMLDivElement>(null)
   const popover = useRef<HTMLDivElement>(null)
@@ -28,7 +27,10 @@ const Popover: React.FC<PopoverProps> = (props) => {
       popover.current!.addEventListener('mouseleave', close)
     }
     return () => {
-
+      const div = document.querySelector('.ting-popover-content')
+      if(div && div.parentElement){
+        div.parentElement.removeChild(div)
+      }
     }
     /*eslint-disable*/
   }, [])
@@ -41,6 +43,11 @@ const Popover: React.FC<PopoverProps> = (props) => {
         document.addEventListener('click', onClickDocument)
         window.addEventListener("scroll", close, true);
       })
+    }else {
+      const div = document.querySelector('.ting-popover-content')
+      if(div && div.parentElement){
+        div.parentElement.removeChild(div)
+      }
     }
     /*eslint-disable*/
   }, [visible])
