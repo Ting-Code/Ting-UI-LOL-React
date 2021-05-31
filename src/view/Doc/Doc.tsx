@@ -58,6 +58,9 @@ const Doc = () => {
           <li>
             <NavLink to="/doc/dialog" activeClassName="link-active">Dialog 对话框</NavLink>
           </li>
+          <li>
+            <NavLink to="/doc/popover" activeClassName="link-active">Popover 提示框</NavLink>
+          </li>
         </ul>
       </aside>
         <Main/>
