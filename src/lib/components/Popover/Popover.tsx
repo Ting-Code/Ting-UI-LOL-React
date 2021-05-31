@@ -87,11 +87,11 @@ const Popover: React.FC<PopoverProps> = (props) => {
     contentWrapper.current!.style.left = positions[position].left + 'px'
   }
   //关闭popover  的事件
-  const onClickDocument = (e: any) => {
-    if (popover.current && (popover.current === e.target || popover.current!.contains(e.target))) {
+  const onClickDocument = (e: Event) => {
+    if (popover.current && (popover.current === e.target || popover.current!.contains(e.target as Element))) {
       return
     }
-    if (contentWrapper.current && (contentWrapper.current === e.target || contentWrapper.current.contains(e.target))) {
+    if (contentWrapper.current && (contentWrapper.current === e.target || contentWrapper.current.contains(e.target as Element))) {
       return
     }
     close()
