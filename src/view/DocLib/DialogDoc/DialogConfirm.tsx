@@ -28,7 +28,7 @@ const DialogConfirm:React.FC = () => {
         第一个参数传入<code>title</code>和<code>children</code>属性，
         第二个可选参数为点击确定回调函数，第三个可选参数为点击取消回调函数
       </p>}
-      defaultVisible={true}
+      defaultVisible={false}
       code={code}>
 
       <Button types='primary' onClick={() => {

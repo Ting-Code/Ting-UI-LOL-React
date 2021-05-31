@@ -1,6 +1,7 @@
 import React from "react";
-import {Button} from "../../../lib";
 import {CodeBox} from "../../components/CodeBox/CodeBox";
+import {Button} from "../../../lib";
+
 
 const ButtonBase:React.FC = () => {
   const code = `<Button>普通按钮</Button>

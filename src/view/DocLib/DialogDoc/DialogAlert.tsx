@@ -23,7 +23,7 @@ const DialogAlert:React.FC = () => {
         <code>alert</code>直接调用<code>Dialog</code>组件，
         传入<code>title</code>和<code>children</code>属性
       </p>}
-      defaultVisible={true}
+      defaultVisible={false}
       code={code}>
 
       <Button types='primary' onClick={() => {
