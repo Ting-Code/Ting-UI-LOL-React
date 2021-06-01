@@ -67,7 +67,7 @@ const AutoInputDoc:React.FC = () => {
     <CodeBox
       title="自动补全"
       description={<p> </p>}
-      defaultVisible={true}
+      defaultVisible={false}
       code={code}
     >
       <div className={"InputBase"}>
