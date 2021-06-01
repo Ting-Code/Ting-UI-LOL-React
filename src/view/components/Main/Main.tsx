@@ -8,6 +8,7 @@ import {UploadDoc} from "../../DocLib/UploadDoc/UploadDoc";
 import {ProgressDoc} from "../../DocLib/Progress/ProgressDoc";
 import {DialogDoc} from "../../DocLib/DialogDoc/DialogDoc";
 import {PopoverDoc} from "../../DocLib/PopoverDoc/PopoverDoc";
+import {RadioDoc} from "../../DocLib/RadioDoc/RadioDoc";
 
 const Main = () => {
   return (
@@ -20,6 +21,7 @@ const Main = () => {
         <Route path="/doc/progress" component={ProgressDoc}/>
         <Route path="/doc/dialog" component={DialogDoc}/>
         <Route path="/doc/popover" component={PopoverDoc}/>
+        <Route path="/doc/radio" component={RadioDoc}/>
       </Switch>
     </div>
   )

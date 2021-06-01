@@ -1,27 +1,34 @@
-import React from "react";
+import React, {useState} from "react";
 import {CodeBox} from "../../components/CodeBox/CodeBox";
 import {Radio, RadioGroup} from "../../../lib";
 
 
 
 const RadioBase:React.FC = () => {
-  const code = `<Button>普通按钮</Button>
-<Button types="glory">边框按钮</Button>
-<Button types="primary">蓝色主题</Button>
-<Button types="link" href={"https://tingcygf.gitee.io/ting-ui-vue3/#/"}>连接按钮</Button>`
-
+  const code = `const [select, setSelect] = useState<number | string>(1)
+  return (
+      <RadioGroup select={select} onChange={(value) => {
+        setSelect(value)
+      }}>
+        <Radio value={1}>第一项</Radio>
+        <Radio value={2}>第二项</Radio>
+        <Radio value={3}>第三项</Radio>
+      </RadioGroup>
+  )
+}`
+  const [select, setSelect] = useState<number | string>(1)
   return (
     <CodeBox
-      className="ButtonBase"
       title="基础使用"
-      description={<p><code>types</code>属性定义按键样式</p>}
+      description={<p><code>value</code>属性定义标识，<code>select</code>选中的<code>value</code>，<code>onChange</code>函数可获取选中的<code>value</code></p>}
       defaultVisible={true}
       code={code}>
-
-      <RadioGroup>
-        <Radio value={1}>Radio</Radio>
-        <Radio value={2}>Radio</Radio>
-        <Radio value={3}>Radio</Radio>
+      <RadioGroup select={select} onChange={(value) => {
+        setSelect(value)
+      }}>
+        <Radio value={1}>第一项</Radio>
+        <Radio value={2}>第二项</Radio>
+        <Radio value={3}>第三项</Radio>
       </RadioGroup>
 
     </CodeBox>

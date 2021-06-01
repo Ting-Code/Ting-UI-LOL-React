@@ -2,15 +2,30 @@ import React from "react";
 import './style.scss'
 import {Attr} from "../../components/Attr/Attr";
 import {RadioBase} from "./RadioBase";
+import {RadioDisabled} from "./RadioDisabled";
 
 const RadioDoc: React.FC = () => {
   const date = [
     {
-      params: 'types',
-      desc: '按钮类型',
-      type: 'string',
-      select: 'icon/default/primary/link/glory',
-      default: 'top',
+      params: 'value',
+      desc: '选项标志符',
+      type: 'string/number',
+      select: 'string/number',
+      default: '必填',
+    },
+    {
+      params: 'select',
+      desc: '选中选项的value值',
+      type: 'string/number',
+      select: 'string/number',
+      default: '',
+    },
+    {
+      params: 'onChange',
+      desc: '选择选项返回value值',
+      type: '(value) => void',
+      select: '(value) => void',
+      default: '',
     },
     {
       params: 'disabled',
@@ -19,33 +34,13 @@ const RadioDoc: React.FC = () => {
       select: 'true/false',
       default: 'false',
     },
-    {
-      params: 'size',
-      desc: '按钮大小',
-      type: 'string',
-      select: 'lg/sm/null',
-      default: 'null',
-    },
-    {
-      params: 'href',
-      desc: 'types为link时跳转地址',
-      type: 'string',
-      select: 'string',
-      default: '',
-    },
-    {
-      params: 'name',
-      desc: 'types为icon时的icon类型',
-      type: 'string',
-      select: 'string',
-      default: '',
-    },
   ]
 
   return (
     <div>
       <h2 className="doc-button">Button 按钮组件</h2>
       <RadioBase/>
+      <RadioDisabled/>
       <Attr data={date} title="Attributes"/>
     </div>
   )
