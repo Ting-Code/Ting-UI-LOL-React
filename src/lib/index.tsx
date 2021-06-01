@@ -1,4 +1,3 @@
-
 export { Button } from './components/Button/Button'
 export { Icon } from './components/Icon/Icon'
 export { Menu } from './components/Menu/Menu'
@@ -12,4 +11,6 @@ export { Dialog } from './components/Dialog/Dialog'
 export { alert } from './components/Dialog/alert'
 export { confirm } from './components/Dialog/confirm'
 export { Popover } from './components/Popover/Popover'
+export { Radio } from './components/Radio/Radio'
+export { RadioGroup } from './components/Radio/RadioGroup'
 
