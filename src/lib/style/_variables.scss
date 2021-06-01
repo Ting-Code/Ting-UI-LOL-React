@@ -4,7 +4,7 @@ $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
+$gray-600: #167bd7 !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
@@ -36,7 +36,6 @@ $border-color:  #c89f48;
 $border-color-highlight: #efe4d4;
 //点击颜色
 $avtive-color: #7e6531;
-
 
 //青色按钮字体颜色
 $primary: #a3c7c7;
@@ -245,55 +244,7 @@ $menu-item-disabled-color:     $gray-600 !default;
 //submenu
 $submenu-box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
 
-//input
-$input-padding-y:                       $btn-padding-y !default;
-$input-padding-x:                       $btn-padding-x !default;
-$input-font-family:                     $btn-font-family !default;
-$input-font-size:                       $btn-font-size !default;
-$input-font-weight:                     $font-weight-base !default;
-$input-line-height:                     $btn-line-height !default;
 
-$input-padding-y-sm:                    $btn-padding-y-sm !default;
-$input-padding-x-sm:                    $btn-padding-x-sm !default;
-$input-font-size-sm:                    $btn-font-size-sm !default;
-
-$input-padding-y-lg:                    $btn-padding-y-lg !default;
-$input-padding-x-lg:                    $btn-padding-x-lg !default;
-$input-font-size-lg:                    $btn-font-size-lg !default;
-
-$input-bg:                              $white !default;
-$input-disabled-bg:                     $gray-200 !default;
-$input-disabled-border-color:           null !default;
-
-$input-color:                           $gray-700 !default;
-$input-border-color:                    $gray-400 !default;
-$input-border-width:                    $border-width !default;
-$input-box-shadow:                      $box-shadow-inset !default;
-
-$input-border-radius:                   $border-radius !default;
-$input-border-radius-lg:                $border-radius-lg !default;
-$input-border-radius-sm:                $border-radius-sm !default;
-
-$input-focus-bg:                        $input-bg !default;
-$input-focus-border-color:              lighten($primary, 25%) !default;
-$input-focus-width:                     .2rem !default;
-$input-focus-color:                     $input-color !default;
-$input-focus-shadow-color:              rgba($primary, .25) !default;
-$input-focus-box-shadow:                0 0 0 $input-focus-width $input-focus-shadow-color !default;
-
-$input-placeholder-color:               $gray-600 !default;
-$input-plaintext-color:                 $body-color !default;
-
-$input-height-border:                   $input-border-width * 2 !default;
-
-
-$input-transition:                      border-color .3s ease-in-out, box-shadow .3s ease-in-out !default;
-
-$input-group-addon-color:               $input-color !default;
-$input-group-addon-bg:                  $gray-200 !default;
-$input-group-addon-border-color:        $input-border-color !default;
-
-// Progress bars
 
 $progress-font-size:                $font-size-base * .75 !default;
 $progress-bg:                       $gray-200 !default;

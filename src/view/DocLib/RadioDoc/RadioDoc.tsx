@@ -38,7 +38,7 @@ const RadioDoc: React.FC = () => {
 
   return (
     <div>
-      <h2 className="doc-button">Button 按钮组件</h2>
+      <h2 className="doc-button">Radio 单项选择组件</h2>
       <RadioBase/>
       <RadioDisabled/>
       <Attr data={date} title="Attributes"/>

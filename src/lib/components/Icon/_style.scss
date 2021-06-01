@@ -1,8 +1,9 @@
 .ting-icon{
   width: 2em;
   height: 2em;
+  fill: #cdbe91;
   &.spin{
-    border: 1px solid white;
+
     animation: circle 1.5s infinite linear;
     @keyframes circle{
       0%{ transform:rotate(0deg); }

@@ -4,11 +4,8 @@ import {Icon} from "../Icon/Icon";
 
 type InputSize = 'lg' | 'sm'
 export interface InputProps extends Omit<InputHTMLAttributes<HTMLElement>, 'size' > {
-  /**是否禁用 Input */
   disabled?: boolean;
-  /**设置 input 大小，支持 lg 或者是 sm */
   size?: InputSize;
-  /**添加图标，在右侧悬浮添加一个图标，用于提示 */
   icon?: string;
   /**添加前缀 用于配置一些固定组合 */
   prepend?: string | ReactElement;
@@ -19,15 +16,7 @@ export interface InputProps extends Omit<InputHTMLAttributes<HTMLElement>, 'size
 
 
 export const Input: FC<InputProps> = (props) => {
-  const {
-    disabled,
-    size,
-    icon,
-    prepend,
-    append,
-    style,
-    ...restProps
-  } = props
+  const {disabled, size, icon, prepend, append, style, ...restProps} = props
   const inputClasses = classNames('ting-input-wrapper', {
     [`input-size-${size}`]: size,
     'is-disabled': disabled,

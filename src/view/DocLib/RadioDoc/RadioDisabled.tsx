@@ -21,7 +21,7 @@ const RadioDisabled:React.FC = () => {
     <CodeBox
       title="禁用选项"
       description={<p><code>disabled</code>属性定义禁用选项</p>}
-      defaultVisible={true}
+      defaultVisible={false}
       code={code}>
       <RadioGroup select={select} onChange={(value) => {
         setSelect(value)

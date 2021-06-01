@@ -112,7 +112,7 @@ const AutoInput: FC<AutoCompleteProps> = (props) => {
         <ul className="ting-suggestion-list">
           { loading &&
           <div className="suggstions-loading-icon">
-            <Icon name="edit" spin/>
+            <Icon name="loding" spin/>
           </div>
           }
           {suggestions.map((item, index) => {

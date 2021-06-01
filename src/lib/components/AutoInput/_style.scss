@@ -6,12 +6,10 @@
   padding-left: 0;
   white-space: nowrap;
   position: absolute;
-  background: $white;
+  background: rgba(60, 57, 57, 0.6);
   z-index: 100;
   top: calc(100% + 8px);
   left: 0;
-  border: $menu-border-width solid $menu-border-color;
-  box-shadow: $submenu-box-shadow;
   width: 100%;
   .suggstions-loading-icon {
     display: flex;
@@ -20,16 +18,16 @@
     min-height: 75px;
   }
   .suggestion-item {
-    padding: $menu-item-padding-y $menu-item-padding-x;
+    padding: .5rem 1rem;
     cursor: pointer;
-    transition: $menu-transition;
-    color: $body-color;
+    color: #9f9470;
     &.is-active {
-      background: $menu-item-active-color !important;
-      color: $white !important;
+      background: rgba(146, 145, 134, 0.6) !important;
+      color: #f0e6d2 !important;
     }
     &:hover {
-      color: $menu-item-active-color !important;
+      color: #f0e6d2 !important;
+      background: rgba(146, 145, 134, 0.6) !important;
     }
   }
 }
