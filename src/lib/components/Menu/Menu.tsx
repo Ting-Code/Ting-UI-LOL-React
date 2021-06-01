@@ -15,15 +15,14 @@ interface MenuProps {
   /**设置子菜单的默认打开 只在纵向模式下生效 */
   defaultOpenSubMenus?: string[];
 }
-
 interface IMenuContext {
   index: string;
   onSelect?: (selectedIndex: string) => void;
   mode?: 'horizontal' | 'vertical';
   defaultOpenSubMenus?: string[];
 }
-const MenuContext = createContext<IMenuContext>({index: '0'})
 
+const MenuContext = createContext<IMenuContext>({index: '0'})
 
 const Menu: React.FC<MenuProps & React.HTMLAttributes<HTMLUListElement>> = (props) => {
   const { className, mode, style, children, defaultIndex, onSelect, defaultOpenSubMenus, ...restProps} = props

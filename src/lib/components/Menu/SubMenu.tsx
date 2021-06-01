@@ -14,8 +14,8 @@ const SubMenu: React.FC<SubMenuProps & React.LiHTMLAttributes<HTMLLIElement>> = 
   const { index, title, children, className, ...restProps} = props
   const context = useContext(MenuContext)
   const openedSubMenus = context.defaultOpenSubMenus as Array<string>
-  const isOpend = (index && context.mode === 'vertical') ? openedSubMenus.includes(index) : false
-  const [ menuOpen, setOpen ] = useState(isOpend)
+  const isOpen = (index && context.mode === 'vertical') ? openedSubMenus.includes(index) : false
+  const [ menuOpen, setOpen ] = useState(isOpen)
   const classes = classNames('ting-menu-item ting-submenu-item', className, {
     'is-active': context.index === index,
     'is-opened': menuOpen,
@@ -35,9 +35,7 @@ const SubMenu: React.FC<SubMenuProps & React.LiHTMLAttributes<HTMLLIElement>> = 
   }
   const clickEvents = context.mode === 'vertical' ? {
     onClick: handleClick
-  } : {
-
-  }
+  } : {}
   const hoverEvents = context.mode !== 'vertical' ? {
     onMouseEnter: (e: React.MouseEvent) => { handleMouse(e, true)},
     onMouseLeave: (e: React.MouseEvent) => { handleMouse(e, false)}
@@ -73,7 +71,7 @@ const SubMenu: React.FC<SubMenuProps & React.LiHTMLAttributes<HTMLLIElement>> = 
         return (
           <Transition
           in={menuOpen}
-          timeout={3000}
+          timeout={300}
           animation="zoom-in-top"
         >
           <ul className={subMenuClasses}>
