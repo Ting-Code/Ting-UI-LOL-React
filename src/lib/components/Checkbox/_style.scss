@@ -1,0 +1,64 @@
+.ting-checkbox-label{
+  position: relative;
+  color: #cdbe91;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  .ting-checkbox-click{
+    position: relative;
+    margin: 0.2em;
+    display: inline-block;
+    vertical-align: middle;
+    border: 2px solid #c89f48;
+    width: 0.9em;
+    height: 0.9em;
+  }
+  .ting-checked-active{
+    .change-span{
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      vertical-align: middle;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border: 0.2em solid #c89f48;
+    }
+  }
+  .ting-indeterminate-active{
+
+  }
+  .ting-checkbox-input{
+    opacity: 0;
+    outline: 0;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+  }
+  .ting-checkbox-children{
+    vertical-align: middle;
+    padding: 4px 8px 4px 4px;
+  }
+  &.disabled{
+    cursor: no-drop;
+    color: #7e6531;
+    .ting-checkbox-click{
+      position: relative;
+      margin: 0.2em;
+      display: inline-block;
+      vertical-align: middle;
+      border: 2px solid #7e6531;
+      width: 0.8em;
+      height: 0.8em;
+    }
+  }
+}
+
+.ting-radio-group{
+  display: flex;
+}
