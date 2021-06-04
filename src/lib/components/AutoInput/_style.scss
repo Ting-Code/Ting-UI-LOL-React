@@ -18,6 +18,9 @@
     min-height: 75px;
   }
   .suggestion-item {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     padding: .5rem 1rem;
     cursor: pointer;
     color: #9f9470;

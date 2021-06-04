@@ -64,6 +64,9 @@ const Doc = () => {
           <li>
             <NavLink to="/doc/radio" activeClassName="link-active">Radio 单选框</NavLink>
           </li>
+          <li>
+            <NavLink to="/doc/checkbox" activeClassName="link-active">Checkbox 多选框</NavLink>
+          </li>
         </ul>
       </aside>
         <Main/>

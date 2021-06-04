@@ -13,4 +13,5 @@ export { confirm } from './components/Dialog/confirm'
 export { Popover } from './components/Popover/Popover'
 export { Radio } from './components/Radio/Radio'
 export { RadioGroup } from './components/Radio/RadioGroup'
+export { Checkbox } from './components/Checkbox/Checkbox'
 
