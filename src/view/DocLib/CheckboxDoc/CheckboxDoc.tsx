@@ -2,16 +2,18 @@ import React from "react";
 import './style.scss'
 import {Attr} from "../../components/Attr/Attr";
 import {CheckboxBase} from "./CheckboxBase";
+import {CheckboxList} from "./CheckboxList";
+import {CheckboxOption} from "./checkboxOption";
 
 
 const CheckboxDoc: React.FC = () => {
   const date = [
     {
-      params: 'types',
-      desc: '按钮类型',
-      type: 'string',
-      select: 'icon/default/primary/link/glory',
-      default: 'top',
+      params: 'checked',
+      desc: '选中状态',
+      type: 'boolean',
+      select: 'true/false',
+      default: 'false',
     },
     {
       params: 'disabled',
@@ -21,24 +23,47 @@ const CheckboxDoc: React.FC = () => {
       default: 'false',
     },
     {
-      params: 'size',
-      desc: '按钮大小',
-      type: 'string',
-      select: 'lg/sm/null',
-      default: 'null',
+      params: 'indeterminate',
+      desc: '半选中状态',
+      type: 'boolean',
+      select: 'true/false',
+      default: 'false',
     },
     {
-      params: 'href',
-      desc: 'types为link时跳转地址',
+      params: 'value',
+      desc: '选项唯一标志值',
       type: 'string',
       select: 'string',
       default: '',
     },
     {
-      params: 'name',
-      desc: 'types为icon时的icon类型',
+      params: 'onChange',
+      desc: '点击触发事件',
+      type: '(e)=>void',
+      select: '(e)=>void',
+      default: '',
+    },
+  ]
+  const date2 = [
+    {
+      params: 'selectOptions',
+      desc: '选中选项value值',
+      type: 'string[]',
+      select: 'string[]',
+      default: '[]',
+    },
+    {
+      params: 'options',
+      desc: '可自动生成选项',
       type: 'string',
-      select: 'string',
+      select: 'string[]',
+      default: 'null',
+    },
+    {
+      params: 'onChange',
+      desc: '返回选中value选项',
+      type: '(value[])=>void',
+      select: '(value[])=>void',
       default: '',
     },
   ]
@@ -47,7 +72,10 @@ const CheckboxDoc: React.FC = () => {
     <div>
       <h2 className="doc-checkbox">Checkbox 多选框组件</h2>
       <CheckboxBase/>
-      <Attr data={date} title="Attributes"/>
+      <CheckboxList/>
+      <CheckboxOption/>
+      <Attr data={date} title="Checkbox"/>
+      <Attr data={date2} title="CheckboxGroup"/>
     </div>
   )
 }
