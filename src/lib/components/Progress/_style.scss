@@ -1,13 +1,22 @@
-.viking-progress-bar {
+.ting-progress-bar {
   width: 100%;
   box-sizing: border-box;
-  .viking-progress-bar-outer {
-    border-radius: $progress-border-radius;
-    background-color: $progress-bg;
+  &.ting-progress-frame{
+    max-width: 388px;
+    padding: 2px 6px;
+    background:url(./b.png) no-repeat center;
+    background-size:100% 100%;
+  }
+  .ting-progress-bar-outer {
+    border: 1px solid #7e6531;
+    background-color: transparent;
     overflow: hidden;
     position: relative;
+    &.ting-progress-background{
+      border: none;
+    }
   }
-  .viking-progress-bar-inner {
+  .ting-progress-bar-inner {
     position: absolute;
     left: 0;
     top: 0;
@@ -15,16 +24,16 @@
     justify-content: flex-end;
     align-items: center;
     height: 100%;
-    border-radius: $progress-border-radius;
     line-height: 1;
-    transition: $progress-bar-transition;
     .inner-text {
-      color: $progress-bar-color;
-      font-size: $progress-font-size;
+      color: #c6b47a;
+      font-size: 0.5rem;
       margin: 0 5px;
     }
+
   }
-  .viking-progress-bar-inner{
-    background-color: red;
+  .ting-progress-bar-inner{
+    background: rgb(10,195,181);
+    background: linear-gradient(270deg, rgba(10,195,181,1) 0%, rgba(0,112,97,1) 100%);
   }
 }
