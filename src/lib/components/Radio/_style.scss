@@ -1,4 +1,6 @@
 .ting-radio-label{
+  user-select: none;
+  cursor: pointer;
   color: #cdbe91;
   display: inline-flex;
   justify-content: center;
@@ -39,6 +41,7 @@
     margin: 0;
   }
   .ting-radio-children{
+    white-space: nowrap;
     vertical-align: middle;
     padding: 4px 8px 4px 4px;
   }
@@ -60,4 +63,5 @@
 
 .ting-radio-group{
   display: flex;
+  flex-wrap: wrap;
 }
