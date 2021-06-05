@@ -1,4 +1,4 @@
-import React, {FunctionComponentElement, useRef} from "react";
+import React, {FunctionComponentElement} from "react";
 import {RadioProps} from "./Radio";
 
 interface RadioGroupProps {
@@ -8,7 +8,6 @@ interface RadioGroupProps {
 
 const RadioGroup:React.FC<RadioGroupProps> = (props) => {
   const {select, onChange} = props
-  const RadioGroup = useRef(null)
   const renderChildren = () => {
     return React.Children.map(props.children, (child, i) => {
       const childElement = child as FunctionComponentElement<RadioProps>
@@ -21,7 +20,7 @@ const RadioGroup:React.FC<RadioGroupProps> = (props) => {
   }
 
   return (
-    <div ref={RadioGroup} className='ting-radio-group'>
+    <div className='ting-radio-group'>
       {renderChildren()}
     </div>
   )
