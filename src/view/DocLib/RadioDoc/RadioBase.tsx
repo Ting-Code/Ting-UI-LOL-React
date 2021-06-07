@@ -10,9 +10,9 @@ const RadioBase:React.FC = () => {
       <RadioGroup select={select} onChange={(value) => {
         setSelect(value)
       }}>
-        <Radio value={1}>第一项</Radio>
-        <Radio value={2}>第二项</Radio>
-        <Radio value={3}>第三项</Radio>
+        <Radio value={1}>符文页</Radio>
+        <Radio value={2}>道具包</Radio>
+        <Radio value={3}>表情</Radio>
       </RadioGroup>
   )
 }`

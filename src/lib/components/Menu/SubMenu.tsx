@@ -17,7 +17,7 @@ const SubMenu: React.FC<SubMenuProps & React.LiHTMLAttributes<HTMLLIElement>> = 
   const isOpen = (index && context.mode === 'vertical') ? openedSubMenus.includes(index) : false
   const [ menuOpen, setOpen ] = useState(isOpen)
   const classes = classNames('ting-menu-item ting-submenu-item', className, {
-    'is-active': context.index === index,
+    'is-active': context.index === index || context.index.split('-')[0] === index,
     'is-opened': menuOpen,
     'is-vertical': context.mode === 'vertical'
   })
