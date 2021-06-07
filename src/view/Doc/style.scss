@@ -1,7 +1,7 @@
 .aside-menu::-webkit-scrollbar { width: 0 !important }
 
 .aside-menu{
-  background: white;
+  background: #010a13;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@
   width: 260px;
   overflow-x: hidden;
   overflow-y: scroll;
-  border-right: 1px solid #e8e8e8;
+  border-right: 1px solid #c89f48;
   z-index: 10;
   padding-bottom: 32px;
   > h2 {
@@ -33,16 +33,17 @@
         display: block;
         padding: 12px 20px;
         cursor: pointer;
-        color: #333;
+        color: #f0e6d2;
 
         &:hover {
-          background: #dfe4ea;
+          background: rgba(167, 160, 160, 0.3);
           border-bottom: none;
           text-decoration: none;
         }
       }
       .link-active {
-        background-color: #dfe4ea;
+        background: rgba(167, 160, 160, 0.3);
+
         border-right: none;
 
         &:after {
@@ -51,7 +52,7 @@
           top: 0;
           right: 0;
           height: 100%;
-          border-right: 3px solid #57606f;
+          border-right: 5px solid #7e6531;
         }
       }
     }

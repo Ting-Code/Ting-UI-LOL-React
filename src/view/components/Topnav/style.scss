@@ -1,18 +1,23 @@
-.topnav{
+.top-back{
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
+  background: #373734;
+  z-index: 20;
+}
+.topnav{
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 20;
-  background: #fff;
+  background:url(../../img/logo.png) no-repeat center;
+  background-size:80px 50px;
   color: #747d8c;
-  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.41);
   padding: 14px 18px;
-
+  border-bottom: 2px solid #c89f48;
+  min-height: 66px;
   .logo{
     > div {
       border-radius: 50%;
@@ -33,8 +38,8 @@
   .toggleAside {
     display: none;
     border-radius: 50%;
-    width: 36px;
-    height: 36px;
+    width: 28px;
+    height: 28px;
     .icon{
       width: 100%;
       height: 100%;

@@ -1,7 +1,8 @@
 .ting-home{
   width: 100%;
-  color: #747d8c;
+  color: #f0e6d2;
   background: rgba(5, 17, 26, 0.9);
+  overflow: auto;
   height: 100vh;
   .main{
     display: flex;
@@ -10,22 +11,21 @@
     align-content: center;
     .title{
       margin: 120px auto 0;
-      font-size: 32px;
-      color: #57606f;
+      font-size: 38px;
+      color: #cdbe91;
     }
     .declare{
-      font-size: 18px;
+      font-size: 16px;
       margin: 0 auto;
     }
     > ul{
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
       margin: 16px auto;
       > li{
-        margin: 12px;
-        padding: 6px 18px;
-        border-radius: 4px;
-        background: #ced6e0;
-        color: #57606f;
+        margin: 8px 18px;
       }
     }
   }
@@ -53,7 +53,7 @@
         }
         .title{
           font-size: 18px;
-          color: #57606f;
+          color: #b8a67e;
         }
         p{
           font-size: 14px;
