@@ -5,8 +5,8 @@
 }
 
 .viking-uploader-dragger {
-  background: $gray-100;
-  border: 1px dashed $gray-300;
+  background: #f8f9fa;
+  border: 1px dashed #f8f9fa;
   border-radius: 4px;
   cursor: pointer;
   padding: 20px;
@@ -40,7 +40,7 @@
     margin-right: 40px;
     svg {
       margin-right: 5px;
-      color: $gray-500;
+      color: white;
     }
   }
   .file-name-error {
@@ -65,7 +65,7 @@
     cursor: pointer;
   }
   &:hover {
-    background-color: $gray-200;
+    background-color: white;
     .file-status {
       display: none;
     }

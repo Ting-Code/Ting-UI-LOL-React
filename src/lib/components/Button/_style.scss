@@ -1,21 +1,19 @@
 .ting-button {
   position: relative;
   display: inline-block;
-  font-weight: $btn-font-weight;
-  line-height: $btn-line-height;
+  font-weight: 400;
+  line-height: 1.5;
   color: $default;
   white-space: nowrap;
   text-align: center;
   vertical-align: middle;
-  border: $btn-border-width solid transparent;
-  @include button-size( $btn-padding-y,  $btn-padding-x,  $btn-font-size,  $border-radius);
-  box-shadow: $btn-box-shadow;
+  border: 1px solid transparent;
+  @include button-size( .375rem,  .75rem,  1rem,  0);
   cursor: pointer;
-  transition: $btn-transition;
   &.disabled,
   &[disabled] {
     cursor: not-allowed;
-    opacity: $btn-disabled-opacity;
+    opacity: .65;
     box-shadow: none;
     > * {
       pointer-events: none;
@@ -175,31 +173,31 @@
 }
 
 .ting-button-lg {
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, 0);
+  @include button-size(.5rem, 1rem, 1.25rem, 0);
 }
 .ting-button-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, 0);
+  @include button-size(.25rem, .5rem, 0.8rem, 0);
 }
 
 
 .ting-button-link {
-  font-weight: $font-weight-normal;
-  color: $btn-link-color;
-  text-decoration: $link-decoration;
+  font-weight: 400;
+  color: $default;
+  text-decoration: none;
   box-shadow: none;
   &:hover {
-    color: $btn-link-hover-color;
-    text-decoration: $link-hover-decoration;
+    color: $highlight;
+    text-decoration: underline;
   }
   &:focus,
   &.focus {
-    text-decoration: $link-hover-decoration;
+    text-decoration: underline;
     box-shadow: none;
   }
   &:disabled,
   &.disabled {
     cursor: not-allowed;
-    color: $btn-link-disabled-color;
+    color: $highlight;
     pointer-events: none;
   }
 }
