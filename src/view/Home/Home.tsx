@@ -2,6 +2,7 @@ import React, {useContext, useEffect} from "react";
 import { Link } from "react-router-dom";
 import './style.scss'
 import {AsideContext} from "../../App";
+import {Button} from "../../lib";
 
 const Home = () => {
   const {setAsideFn} = useContext(AsideContext);
@@ -14,9 +15,9 @@ const Home = () => {
         <p className="title">TING UI</p>
         <p className="declare">基于React的UI框架</p>
         <ul>
-          <li><a href="https://github.com/TINGCYGF">码 云</a></li>
-          <li><a href="https://github.com/TINGCYGF">Github</a></li>
-          <li><Link to="/doc">起 步</Link></li>
+          <li><a href="https://github.com/TINGCYGF"><Button types="glory">码 云</Button></a></li>
+          <li><a href="https://github.com/TINGCYGF"><Button types="glory">Github</Button></a></li>
+          <li><Link to="/doc"><Button types="glory">起 步</Button></Link></li>
         </ul>
       </div>
       <div className='foot'>
@@ -32,6 +33,15 @@ const Home = () => {
           </li>
           <li>
             <svg className="icon" aria-hidden="true">
+              <use xlinkHref="#icon-LOL_logo"></use>
+            </svg>
+            <div>
+              <p className="title">LOL UI</p>
+              <p>组件模仿英雄联盟样式编写</p>
+            </div>
+          </li>
+          <li>
+            <svg className="icon" aria-hidden="true">
               <use xlinkHref="#icon-typescript"></use>
             </svg>
             <div>
@@ -39,15 +49,7 @@ const Home = () => {
               <p>采用 TypeScript 书写</p>
             </div>
           </li>
-          <li>
-            <svg className="icon" aria-hidden="true">
-              <use xlinkHref="#icon-UIzhongguo"></use>
-            </svg>
-            <div>
-              <p className="title">简约 UI</p>
-              <p>每个组件的UI设计简约大方</p>
-            </div>
-          </li>
+
         </ul>
       </div>
 

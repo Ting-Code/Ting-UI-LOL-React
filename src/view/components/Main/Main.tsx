@@ -24,7 +24,6 @@ const Main = () => {
         <Route path="/doc/popover" component={PopoverDoc}/>
         <Route path="/doc/radio" component={RadioDoc}/>
         <Route path="/doc/checkbox" component={CheckboxDoc}/>
-
       </Switch>
     </div>
   )

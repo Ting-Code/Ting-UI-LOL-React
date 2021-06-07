@@ -2,7 +2,6 @@ import React, {useContext} from "react";
 import classNames from "classnames";
 import { MenuContext } from "./Menu";
 
-
 interface MenuItemProps extends React.LiHTMLAttributes<HTMLElement>{
   index?: string;
   disabled?: boolean;

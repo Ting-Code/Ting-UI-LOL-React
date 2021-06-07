@@ -8,13 +8,6 @@ import {InputPart} from "./InputPart";
 const InputDoc: React.FC = () => {
   const date = [
     {
-      params: 'types',
-      desc: '按钮类型',
-      type: 'string',
-      select: 'icon/default/primary/link/glory',
-      default: 'top',
-    },
-    {
       params: 'disabled',
       desc: '禁用状态',
       type: 'boolean',
@@ -23,34 +16,72 @@ const InputDoc: React.FC = () => {
     },
     {
       params: 'size',
-      desc: '按钮大小',
+      desc: '输入框大小',
       type: 'string',
       select: 'lg/sm/null',
       default: 'null',
     },
     {
-      params: 'href',
-      desc: 'types为link时跳转地址',
+      params: 'icon',
+      desc: 'icon类型',
       type: 'string',
-      select: 'string',
+      select: 'icon->name属性',
       default: '',
     },
     {
-      params: 'name',
-      desc: 'types为icon时的icon类型',
-      type: 'string',
-      select: 'string',
+      params: 'prepend',
+      desc: '前缀',
+      type: 'ReactElement',
+      select: 'ReactElement',
+      default: '',
+    },
+    {
+      params: 'append',
+      desc: '后缀',
+      type: 'ReactElement',
+      select: 'ReactElement',
+      default: '',
+    },
+    {
+      params: 'onChange',
+      desc: '修改内容触发事件',
+      type: '() => void',
+      select: '(e: ChangeEvent<HTMLInputElement>) => void',
+      default: '',
+    },
+  ]
+  const date2 = [
+    {
+      params: 'fetchSuggestions',
+      desc: '回调输入内容返回自动补全数据',
+      type: '()=>{}',
+      select: '(str: string) => DataSourceType[] | Promise<DataSourceType[]>',
+      default: '',
+    },
+    {
+      params: 'onSelect',
+      desc: '选中自动补全触发',
+      type: '()=>void',
+      select: '(item: DataSourceType) => void',
+      default: '',
+    },
+    {
+      params: 'renderOption',
+      desc: '自定义选项样式',
+      type: '() => {}',
+      select: '(item: DataSourceType) => ReactElement',
       default: '',
     },
   ]
 
   return (
     <div>
-      <h2 className="doc-input">Button 按钮组件</h2>
+      <h2 className="doc-input">Input 输入框组件</h2>
       <InputBase/>
       <InputPart/>
       <AutoInputDoc/>
-      <Attr data={date} title="Attributes"/>
+      <Attr data={date} title="Input"/>
+      <Attr data={date2} title="AutoInput"/>
     </div>
   )
 }
