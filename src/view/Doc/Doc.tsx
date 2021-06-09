@@ -17,11 +17,12 @@ const Doc = () => {
   const onChangeAside = (e: React.MouseEvent) => {
     const main = document.querySelector('.main-doc')
     main!.scrollTop = 0
+    const width = document.documentElement.clientWidth
+    if(width <= 500){
+      setAsideVisibleFn(false)
+    }
     if(e.target instanceof HTMLAnchorElement){
-      const width = document.documentElement.clientWidth
-      if(width < 500){
-        setAsideVisibleFn(false)
-      }
+
     }
   }
   return (

@@ -25,11 +25,13 @@ const Topnav = () => {
               </div>
             </Link>
           }
-          <ul className="menu">
-            <li><Link to="/doc">文档</Link></li>
-            <li><a href="https://www.yuque.com/u2368282/nvuyr1">博客</a></li>
-            <li><a href="https://github.com/TINGCYGF">GitHub</a></li>
-          </ul>
+          {
+            aside && <ul className="menu">
+              <li><Link to="/doc">文档</Link></li>
+              <li><a href="https://www.yuque.com/u2368282/nvuyr1">博客</a></li>
+              <li><a href="https://github.com/TINGCYGF">GitHub</a></li>
+            </ul>
+          }
         </HashRouter>
       </div>
     </div>
