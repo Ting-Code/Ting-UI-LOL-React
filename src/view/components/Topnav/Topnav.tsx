@@ -27,7 +27,7 @@ const Topnav = () => {
           }
           {
             aside && <ul className="menu">
-              <li><Link to="/doc">文档</Link></li>
+              <li><Link to="/doc/button">文档</Link></li>
               <li><a href="https://www.yuque.com/u2368282/nvuyr1">博客</a></li>
               <li><a href="https://github.com/TINGCYGF">GitHub</a></li>
             </ul>
