@@ -1,0 +1,30 @@
+.doc-intro{
+  text-align: justify;
+  > h1 {
+    color: #f0e6d2;
+    font-size: 32px;
+    margin: 8px;
+  }
+
+  > P{
+    padding: 18px;
+    vertical-align:middle;
+    line-height: 1.6em;
+    text-align: justify;
+    font-size: 16px;
+    code {
+      border-radius: 1px;
+      background: rgba(164, 184, 171, 0.5);
+      padding: 1px;
+      margin: 4px;
+    }
+    strong{
+      color: #f0e6d2;
+    }
+  }
+  .ps{
+    margin-top: 38px;
+  }
+
+
+}

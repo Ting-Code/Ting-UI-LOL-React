@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './lib/style/index.scss';
 import { Home } from "./view/Home/Home";
-import {HashRouter, Route, Switch} from 'react-router-dom';
+import {HashRouter, Redirect, Route, Switch} from 'react-router-dom';
 import {Doc} from "./view/Doc/Doc";
 import {Topnav} from "./view/components/Topnav/Topnav";
 const AsideContext = React.createContext<{asideVisible: boolean, setAsideVisibleFn:any, aside: boolean, setAsideFn:any}>({asideVisible: false, setAsideVisibleFn: {}, aside: false, setAsideFn:{}});
@@ -25,6 +25,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact={false} path="/doc" component={Doc} />
+            <Redirect from="/*" to="/doc/*" />
           </Switch>
         </HashRouter>
       </AsideContext.Provider>

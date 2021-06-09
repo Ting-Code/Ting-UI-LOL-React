@@ -10,6 +10,8 @@ import {DialogDoc} from "../../DocLib/DialogDoc/DialogDoc";
 import {PopoverDoc} from "../../DocLib/PopoverDoc/PopoverDoc";
 import {RadioDoc} from "../../DocLib/RadioDoc/RadioDoc";
 import {CheckboxDoc} from "../../DocLib/CheckboxDoc/CheckboxDoc";
+import {IntroDoc} from "../../DocLib/IntroDoc/IntroDoc";
+import {NotFound} from "../../DocLib/NotFound/NotFound";
 
 const Main = () => {
   return (
@@ -24,6 +26,8 @@ const Main = () => {
         <Route path="/doc/popover" component={PopoverDoc}/>
         <Route path="/doc/radio" component={RadioDoc}/>
         <Route path="/doc/checkbox" component={CheckboxDoc}/>
+        <Route path="/doc/intro" component={IntroDoc}/>
+        <Route path="/doc/*" component={NotFound}/>
       </Switch>
     </div>
   )

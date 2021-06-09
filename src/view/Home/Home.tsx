@@ -17,7 +17,7 @@ const Home = () => {
         <ul>
           <li><a href="https://github.com/TINGCYGF"><Button types="glory">码 云</Button></a></li>
           <li><a href="https://github.com/TINGCYGF"><Button types="glory">Github</Button></a></li>
-          <li><Link to="/doc"><Button types="glory">起 步</Button></Link></li>
+          <li><Link to="/doc/intro"><Button types="glory">起 步</Button></Link></li>
         </ul>
       </div>
       <div className='foot'>
