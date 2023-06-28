@@ -7,3 +7,5 @@ TING UI 是基于React开发的模仿英雄联盟UI的组件库，由[Ting](http
 
 
 PS: 该文档网页适配**移动端**和**PC**，手机端点击右上角查看组件列表
+
+预览地址： https://ting-code.github.io/Ting-UI-LOL-React/build/index.html#/
